@@ -24,47 +24,51 @@ class WeatherBody extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children: [
-              Text(
-                cubit.model!.cityName ?? "",
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-              Text(
-                "Updated at ${cubit.model!.date ?? ""}",
-                style: Theme.of(context).textTheme.titleSmall,
-              ),
-              SizedBox(
-                height: height(context) / 20,
-              ),
-              Image.asset("assets/images/cloudy.png"),
-              SizedBox(
-                height: height(context) / 40,
-              ),
-              Text(
-                "17°C",
-                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 50,
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Text(
+                    cubit.model!.cityName ?? "",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  Text(
+                    "Updated at ${cubit.model!.date ?? ""}",
+                    style: Theme.of(context).textTheme.titleSmall,
+                  ),
+                  SizedBox(
+                    height: height(context) / 20,
+                  ),
+                  Image.asset("assets/images/cloudy.png"),
+                  SizedBox(
+                    height: height(context) / 40,
+                  ),
+                  Text(
+                    "17°C",
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 50,
+                        ),
+                  ),
+                  SizedBox(
+                    height: height(context) / 20,
+                  ),
+                  Text(
+                    cubit.model!.weatherCondition ?? "Cloudy",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  SizedBox(
+                    height: height(context) / 20,
+                  ),
+                  const Text(
+                    "25°C / 28°C",
+                    style: TextStyle(
+                      fontSize: 20,
                     ),
+                  ),
+                ],
               ),
-              SizedBox(
-                height: height(context) / 20,
-              ),
-              Text(
-                cubit.model!.weatherCondition ?? "Cloudy",
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-              SizedBox(
-                height: height(context) / 20,
-              ),
-              const Text(
-                "25°C / 28°C",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            ],
+            ),
           ),
         );
       },

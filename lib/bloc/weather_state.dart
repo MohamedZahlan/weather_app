@@ -12,3 +12,5 @@ class WeatherGetDataErrorState extends WeatherStates {
   final error;
   WeatherGetDataErrorState(this.error);
 }
+
+class WeatherNavigateToHomeViewState extends WeatherStates {}

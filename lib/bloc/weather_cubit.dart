@@ -21,11 +21,16 @@ class WeatherCubit extends Cubit<WeatherStates> {
       emit(WeatherGetDataSuccessState());
       model = WeatherModel.fromJson(value.data);
       //message = value.data['error']['message'];
-      navigateToFinish(context, const HomeView());
+      navigateToHomeView(context);
       print(model!.weatherCondition);
     }).catchError((error) {
       emit(WeatherGetDataErrorState(error));
       throw Exception(error.toString());
     });
+  }
+
+  void navigateToHomeView(context) {
+    navigateToFinish(context, const HomeView());
+    emit(WeatherNavigateToHomeViewState());
   }
 }

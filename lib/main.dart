@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/bloc/weather_cubit.dart';
+import 'package:weather_app/cubits/weather_cubit.dart';
 import 'package:weather_app/services/news_services.dart';
 import 'package:weather_app/themes/light_theme.dart';
 import 'package:weather_app/views/home_view.dart';
-
-import 'bloc/bloc_observer.dart';
+import 'cubits/bloc_observer.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

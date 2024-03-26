@@ -25,9 +25,9 @@ ThemeData lightTheme = ThemeData(
       fontWeight: FontWeight.w600,
       fontSize: 22.0,
     ),
-    systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: Colors.orange.shade300,
-      statusBarIconBrightness: Brightness.dark,
+    systemOverlayStyle: const SystemUiOverlayStyle(
+      statusBarColor: Colors.deepPurple,
+      statusBarIconBrightness: Brightness.light,
       statusBarBrightness: Brightness.dark, //Colors.white, //Colors.white
     ),
   ),

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 //Color myDefaultColor = HexColor('56108a');
 // For AppBar Light Theme
-Color myDefaultColor = Colors.orange.shade300;
+Color myDefaultColor = Colors.deepPurple;
 //MaterialColor defaultColor = Colors.teal;
 // App Colors
 var orangeColor = const Color(0xffEF9235);
